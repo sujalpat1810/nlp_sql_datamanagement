@@ -6,6 +6,7 @@ A powerful data management system that converts natural language queries into SQ
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)
 ![Claude AI](https://img.shields.io/badge/Claude-3.5_Sonnet-purple.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-181717?logo=github)](https://github.com/sujalpat1810/nlp_sql_datamanagement)
 
 ## 🌟 Features
 
@@ -40,7 +41,7 @@ A powerful data management system that converts natural language queries into SQ
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/nlp_sql_datamanagement.git
+git clone https://github.com/sujalpat1810/nlp_sql_datamanagement.git
 cd nlp_sql_datamanagement
 ```
 
