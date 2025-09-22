@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NLP to SQL Results Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .results-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e7f3ff;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+        }
+        .sql-code {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .results-table th {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .results-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .results-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #007bff;
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📍 Where Your Query Results Will Appear</h1>
+        
+        <div class="step">
+            <h2>Step 1: Upload Your CSV File ✅</h2>
+            <p>You've already uploaded: <strong>employees (1).csv</strong></p>
+        </div>
+        
+        <div class="step">
+            <h2>Step 2: Enter Your Query ✅</h2>
+            <p>You entered: <strong>"Who has the highest salary in the company?"</strong></p>
+        </div>
+        
+        <div class="step">
+            <h2>Step 3: Click "Convert to SQL" ✅</h2>
+            <p>The system processes your query and generates SQL</p>
+        </div>
+        
+        <div class="arrow">↓</div>
+        
+        <div class="results-section">
+            <h2>📊 THIS IS WHERE YOUR RESULTS APPEAR:</h2>
+            
+            <h3>Generated SQL Query:</h3>
+            <div class="sql-code">
+                SELECT * FROM employees ORDER BY Salary DESC LIMIT 1
+            </div>
+            
+            <h3>Explanation:</h3>
+            <p>This query finds the employee with the highest salary by sorting all employees by salary in descending order and taking the first result.</p>
+            
+            <h3 class="highlight">Query Results (1 row returned):</h3>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Gender</th>
+                        <th>Start Date</th>
+                        <th>Last Login Time</th>
+                        <th>Salary</th>
+                        <th>Bonus %</th>
+                        <th>Senior Management</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Male</td>
+                        <td>2018-05-15</td>
+                        <td>2025-09-22 10:30:00</td>
+                        <td class="highlight">$285,000</td>
+                        <td>20.5%</td>
+                        <td>Yes</td>
+                        <td>Executive</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 20px;">
+                <button style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                    Export Results as CSV
+                </button>
+            </p>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background-color: #fff3cd; border-radius: 8px; border: 1px solid #ffeaa7;">
+            <h3>⚠️ Troubleshooting:</h3>
+            <p>If you're not seeing results like above, check:</p>
+            <ul>
+                <li><strong>Toggle Mock Mode:</strong> Make sure Mock Mode is ON if you don't have a Claude API key</li>
+                <li><strong>File Upload:</strong> Ensure your CSV file was uploaded successfully</li>
+                <li><strong>Check Console:</strong> Press F12 in your browser to see any error messages</li>
+                <li><strong>Server Running:</strong> Make sure the backend server is running (you should see logs in the terminal)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
